@@ -1,0 +1,32 @@
+.container {
+  margin-bottom: 5rem;
+
+  .our-games {
+    margin-top: 8rem;
+
+    .game {
+      display: flex;
+      justify-content: center;
+
+      max-width: 70%;
+      margin: 0 auto;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+
+      &_content {
+        margin-top: 3rem;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+}

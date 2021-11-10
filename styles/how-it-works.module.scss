@@ -1,0 +1,27 @@
+.how-it-works {
+  > img {
+    width: 100%;
+  }
+
+  &_content {
+    margin: 3rem 0 6rem;
+  }
+
+  &_info {
+    width: 90vw;
+    margin: 0 auto;
+
+    > h2 {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(even) {
+      text-align: right;
+      margin-top: 6rem;
+
+      > h2 {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

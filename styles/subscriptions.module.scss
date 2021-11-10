@@ -1,0 +1,88 @@
+@use '../styles/variables' as *;
+
+.container {
+  margin-bottom: 5rem;
+
+  .main-banner img {
+    width: 100%;
+  }
+
+  .form {
+    text-align: center;
+    margin-top: 4rem;
+    max-width: 50vw;
+    margin: 2rem auto;
+
+    &-container {
+      width: 100%;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    button {
+      cursor: pointer;
+
+      color: $white;
+      background: $orange;
+
+      border: 0;
+      border-radius: 50px;
+
+      width: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s ease-in-out;
+
+      img {
+        width: 40px;
+      }
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+
+    &-row {
+      display: grid;
+
+      // i have rows with 1 input, 3 inputs and 2 inputs. It must be auto-sized
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 0.5rem;
+      margin: 1rem 0;
+      flex-grow: 1;
+
+      input,
+      select {
+        width: 100%;
+        border: 0;
+        background: #ededed;
+        padding: 0.75rem 1.2rem;
+        border-radius: 100px;
+        font-size: 1.1rem;
+
+        flex-grow: 1;
+      }
+
+      select {
+        background-image: url(/assets/icons/select-arrow.svg);
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        -webkit-appearance: none;
+        background-position-x: 97%;
+
+        &:focus {
+          border-radius: 20px 20px 0 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@use './variables' as *;
+
+.container {
+  margin-top: 5rem;
+
+  .main-banner {
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
+
+    .content {
+      position: relative;
+      padding: 2rem 0 3rem;
+      width: 35%;
+    }
+
+    > img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 300px;
+    }
+  }
+
+  .about {
+    position: relative;
+    background: $white;
+
+    padding: 4rem;
+
+    &::before {
+      $size: 15px;
+
+      content: '';
+      width: 70%;
+      height: $size;
+      background-color: $black;
+      position: absolute;
+      left: 50%;
+      top: -$size;
+      transform: translateX(-50%);
+
+      border-radius: 25px 25px 0 0;
+    }
+
+    .about-content {
+      margin-top: 5rem;
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+
+        img {
+          width: 50vw;
+        }
+      }
+
+      &:nth-child(even) {
+        text-align: right;
+
+        p,
+        ul {
+          text-align: left;
+        }
+      }
+    }
+
+    p {
+      margin: 2rem 0;
+    }
+  }
+}
