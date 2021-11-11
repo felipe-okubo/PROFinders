@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className={styles['container-right_social']}>
-          <a href="https://www.instagram.com/fe.okubo">
+          <a href="https://www.instagram.com">
             <InstagramIcon />
           </a>
 
