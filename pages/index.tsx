@@ -111,10 +111,8 @@ const Home: NextPage = () => {
         >
           <img src="/assets/slider-valorant.jpg" alt="Slider - imagem 1" />
           <img src="/assets/slider-overwatch.jpg" alt="Slider - imagem 2" />
-          <img src="/assets/slider-valorant.jpg" alt="Slider - imagem 1" />
-          <img src="/assets/slider-overwatch.jpg" alt="Slider - imagem 2" />
-          <img src="/assets/slider-valorant.jpg" alt="Slider - imagem 1" />
-          <img src="/assets/slider-overwatch.jpg" alt="Slider - imagem 2" />
+          <img src="/assets/slider-csgo.jpg" alt="Slider - imagem 3" />
+          <img src="/assets/slider-lol.jpg" alt="Slider - imagem 4" />
         </Flickity>
       </section>
 
