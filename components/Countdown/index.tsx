@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../../styles/countdown.module.scss';
 
 interface Props {
@@ -31,15 +31,16 @@ const Countdown: React.FC<Props> = ({ date }) => {
     let hours = floor((distanceToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = floor((distanceToDate % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = floor((distanceToDate % (1000 * 60)) / 1000);
-    
+
     const addPad = (num: string | number) => {
       return String(num).padStart(2, '0').toString();
-    }
+    };
 
-    const hasCountdownFinished = [days, hours, minutes, seconds].every(num => num == 0 || num < 0);
+    const hasCountdownFinished = [days, hours, minutes, seconds].every(
+      (num) => num == 0 || num < 0
+    );
 
     console.log({ hasCountdownFinished, days, hours, minutes, seconds });
-    
 
     if (hasCountdownFinished) {
       setHasFinished(true);
@@ -49,29 +50,39 @@ const Countdown: React.FC<Props> = ({ date }) => {
       days: addPad(days || 0),
       hours: addPad(hours || 0),
       minutes: addPad(minutes || 0),
-      seconds: addPad(seconds || 0)
+      seconds: addPad(seconds || 0),
     });
   };
 
   return !hasFinished ? (
     <div className={styles['countdown']}>
       <div className={styles['countdown-time']}>
-        <div className={styles['countdown-time_item']}>{state.days}</div>
+        <div className={`${styles['countdown-time_item']} ${styles['days']}`}>
+          {state.days}<span>DIAS</span>
+        </div>
       </div>
 
       <div className={styles['countdown-time']}>
-        <div className={styles['countdown-time_item']}>{state.hours}</div>
+        <div className={`${styles['countdown-time_item']} ${styles['hours']}`}>
+          {state.hours}<span>HORAS</span>
+        </div>
       </div>
 
       <div className={styles['countdown-time']}>
-        <div className={styles['countdown-time_item']}>{state.minutes}</div>
+        <div className={`${styles['countdown-time_item']} ${styles['minutes']}`}>
+          {state.minutes}<span>MIN</span>
+        </div>
       </div>
 
       <div className={styles['countdown-time']}>
-        <div className={styles['countdown-time_item']}>{state.seconds}</div>
+        <div className={`${styles['countdown-time_item']} ${styles['seconds']}`}>
+          {state.seconds}<span>SEG</span>
+        </div>
       </div>
     </div>
-  ) : <h3 className={styles['countdown-over']}>A promoção encerrou :(</h3>;
+  ) : (
+    <h3 className={styles['countdown-over']}>A promoção encerrou :(</h3>
+  );
 };
 
-export default Countdown
+export default Countdown;

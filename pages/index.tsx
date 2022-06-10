@@ -83,11 +83,11 @@ const Home: NextPage = () => {
 
       <section className={styles['main-banner_content']}>
 
-        <CountdownTimer date='06/17/2022 21:05:08' />
+        <CountdownTimer date='07/30/2022 21:05:08' />
 
         <div className={styles['text-promotion']}>
-          <p>PROMOÇÃO MÊS DE JULHO</p>
-          <span>Aguarde....</span>
+          <p>PROMOÇÃO MÊS DE JULHO !</p>
+          <span>Entre em contato durante o mês de Julho para promocões especiais</span>
         </div>
 
         <h1>PROFINDERS</h1>

@@ -43,11 +43,18 @@
 
     .text-promotion {
 
-      p,span {
+      p {
         color: #FF9C00;
         font-weight: 700;
         font-size: 24px;
       }
+      
+      span {
+        font-size: 16px;
+        color: #ffba4e;
+      }
+
+      margin-bottom: 35px;
     }
 
     h1 {
