@@ -9,6 +9,8 @@ import Flickity from 'react-flickity-component';
 import 'flickity/css/flickity.css';
 import { Footer } from '../components/Footer';
 
+import CountdownTimer from '../components/Countdown';
+
 type BoxProps = { content: typeof ourServicesBoxes[number] };
 type CommentProps = { content: typeof comments[number] };
 
@@ -80,8 +82,15 @@ const Home: NextPage = () => {
       </section>
 
       <section className={styles['main-banner_content']}>
-        <h1>PROFINDERS</h1>
 
+        <CountdownTimer date='06/17/2022 21:05:08' />
+
+        <div className={styles['text-promotion']}>
+          <p>PROMOÇÃO MÊS DE JULHO</p>
+          <span>Aguarde....</span>
+        </div>
+
+        <h1>PROFINDERS</h1>
         <p>
           Com um ensino online direcionado para jogos eletrônicos competitivos, a
           ProFinders é feita para você que tenha interesse em entrar no cenário

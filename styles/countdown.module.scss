@@ -1,0 +1,28 @@
+@use '../styles/variables' as *;
+
+.countdown-over {
+    display: block;
+    color: white;
+    border: 2px solid $orange;
+    padding: 8px 0;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto 40px;
+
+    &-time{
+        background: white;
+
+        &_item {
+            width: 70px;
+            border: 2px solid $orange;
+            color: $black;
+        }
+    }
+}
